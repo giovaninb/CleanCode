@@ -1,8 +1,4 @@
-package controle;
-
 import java.awt.EventQueue;
-
-import visão.App;
 
 /*
  * Aplicação simples para mostrar a estruturação
