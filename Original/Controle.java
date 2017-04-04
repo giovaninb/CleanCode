@@ -1,5 +1,3 @@
-package controle;
-
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,8 +7,6 @@ import javax.print.attribute.standard.NumberUpSupported;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import modelo.Calculadora;
-import visão.App;
 
 public class Controle implements KeyListener, ActionListener {
 

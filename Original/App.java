@@ -1,5 +1,3 @@
-package visão;
-
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -19,7 +17,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 
 public class App extends JFrame {
-	// Grupo de painéis
+	// Grupo de painÃ©is
 	private JPanel painelMaster;
 	private JPanel painel1;
 	private JPanel painel2;
@@ -28,7 +26,7 @@ public class App extends JFrame {
 	private JTextField campoResultado;
 	private JTextField campoTexto1;
 	private JTextField campoTexto2;
-	// Grupo de botões
+	// Grupo de botÃµes
 	private JButton botaoSomar;
 	private JButton botaoLimpar;
 	// Grupo de Menu
@@ -88,7 +86,7 @@ public class App extends JFrame {
 		painel2.setLayout(new FlowLayout());
 		painel1.add(painel2);
 
-		JLabel nume1 = new JLabel("Primeiro número:");
+		JLabel nume1 = new JLabel("Primeiro numero:");
 		nume1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		painel2.add(nume1);
 
@@ -97,7 +95,7 @@ public class App extends JFrame {
 		painel2.add(campoTexto1);
 		campoTexto1.setColumns(10);
 
-		JLabel nume2 = new JLabel("Segundo número:");
+		JLabel nume2 = new JLabel("Segundo numero:");
 		nume2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		painel2.add(nume2);
 
@@ -122,7 +120,7 @@ public class App extends JFrame {
 	}
 	
 	/*
-	 * "Getters e setters" da visão
+	 * "Getters e setters" da visÃ£o
 	 */
 
 	public JButton getBtnSomar() {
