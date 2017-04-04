@@ -6,11 +6,26 @@ public class Calculadora {
 	private int resultado;
 		
 	public Calculadora(int num1, int num2, int resultado) {
-		super();
 		this.num1 = num1;
 		this.num2 = num2;
 		this.resultado = resultado;
 	}
+	
+	public Calculadora() {
+		
+	}
+	
+	/*
+	 * Método para "regra do negócio"
+	 */
+	public String somaNumeros(){
+		this.resultado = this.num1 + this.num2;
+		return this.getNum1()+ " + " +this.getNum2()+ " = " +this.getResultado();
+	}	
+	
+	/*
+	 * "Getters e setters" do modelo
+	 */
 	
 	public int getNum1() {
 		return num1;
@@ -30,13 +45,5 @@ public class Calculadora {
 	public void setResultado(int resultado) {
 		this.resultado = resultado;
 	}
-	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return this.getNum1()+ " + " +this.getNum2()+ " = " +this.getResultado();
-	}
-	
-	
 	
 }
