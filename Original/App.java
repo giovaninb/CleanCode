@@ -19,42 +19,50 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 
 public class App extends JFrame {
+	// Grupo de painéis
 	private JPanel painelMaster;
-	private JPanel painel;
+	private JPanel painel1;
 	private JPanel painel2;
 	private JPanel painel3;
-	private JTextField textResultado;
-	private JTextField textField;
-	private JTextField textField2;
-	private JButton btnSomar;
-	private JButton btnLimpar;
-	private JMenuBar menuBar;
-	private JMenu mnMenu;
-	private JMenuItem mntmSair;
+	// Grupo de textField's	
+	private JTextField campoResultado;
+	private JTextField campoTexto1;
+	private JTextField campoTexto2;
+	// Grupo de botões
+	private JButton botaoSomar;
+	private JButton botaoLimpar;
+	// Grupo de Menu
+	private JMenuBar barraMenu;
+	private JMenu menu;
+	private JMenuItem menuItemSair;
 
 	/**
-	 * Create the frame.
+	 * Construtor que cria o Frame
 	 */
 	public App() {
+		
+		/*
+		 * Cria o Frame com todos os seus componentes
+		 */
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 250);
 		setTitle("Prova 2 POO I");
 
-		menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
+		barraMenu = new JMenuBar();
+		setJMenuBar(barraMenu);
 
-		mnMenu = new JMenu("Menu");
-		mnMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
-		menuBar.add(mnMenu);
+		menu = new JMenu("Menu");
+		menu.setFont(new Font("Tahoma", Font.BOLD, 15));
+		barraMenu.add(menu);
 
-		mntmSair = new JMenuItem("Sair");
-		mntmSair.setFont(new Font("Tahoma", Font.BOLD, 15));
-		mntmSair.addActionListener(new ActionListener() {
+		menuItemSair = new JMenuItem("Sair");
+		menuItemSair.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menuItemSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		mnMenu.add(mntmSair);
+		menu.add(menuItemSair);
 
 		painelMaster = new JPanel();
 		painelMaster.setBackground(new Color(255, 204, 204));
@@ -62,123 +70,91 @@ public class App extends JFrame {
 		painelMaster.setLayout(new GridLayout(1, 1, 10, 10));
 		setContentPane(painelMaster);
 
-		painel = new JPanel();
-		painel.setBackground(new Color(255, 204, 204));
-		painel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		painel.setLayout(new GridLayout(3, 1, 10, 10));
-		painelMaster.add(painel);
+		painel1 = new JPanel();
+		painel1.setBackground(new Color(255, 204, 204));
+		painel1.setBorder(new EmptyBorder(5, 5, 5, 5));
+		painel1.setLayout(new GridLayout(3, 1, 10, 10));
+		painelMaster.add(painel1);
 
-		textResultado = new JTextField();
-		textResultado.setFont(new Font("Tahoma", Font.BOLD, 30));
-		textResultado.setEditable(false);
-		textResultado.setHorizontalAlignment((int) CENTER_ALIGNMENT);
-		painel.add(textResultado);
+		campoResultado = new JTextField();
+		campoResultado.setFont(new Font("Tahoma", Font.BOLD, 30));
+		campoResultado.setEditable(false);
+		campoResultado.setHorizontalAlignment((int) CENTER_ALIGNMENT);
+		painel1.add(campoResultado);
 
 		painel2 = new JPanel();
 		painel2.setBackground(new Color(255, 204, 204));
 		painel2.setBorder(new EmptyBorder(5, 5, 5, 5));
 		painel2.setLayout(new FlowLayout());
-		painel.add(painel2);
+		painel1.add(painel2);
 
 		JLabel nume1 = new JLabel("Primeiro número:");
 		nume1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		painel2.add(nume1);
 
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
-		painel2.add(textField);
-		textField.setColumns(10);
+		campoTexto1 = new JTextField();
+		campoTexto1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		painel2.add(campoTexto1);
+		campoTexto1.setColumns(10);
 
 		JLabel nume2 = new JLabel("Segundo número:");
 		nume2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		painel2.add(nume2);
 
-		textField2 = new JTextField();
-		textField2.setFont(new Font("Tahoma", Font.BOLD, 15));
-		painel2.add(textField2);
-		textField2.setColumns(10);
+		campoTexto2 = new JTextField();
+		campoTexto2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		painel2.add(campoTexto2);
+		campoTexto2.setColumns(10);
 
 		painel3 = new JPanel();
 		painel3.setBackground(new Color(255, 204, 204));
 		painel3.setBorder(new EmptyBorder(5, 5, 5, 5));
 		painel3.setLayout(new FlowLayout());
-		painel.add(painel3);
+		painel1.add(painel3);
 
-		btnSomar = new JButton("Somar");
-		btnSomar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		painel3.add(btnSomar);
+		botaoSomar = new JButton("Somar");
+		botaoSomar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		painel3.add(botaoSomar);
 
-		btnLimpar = new JButton("Limpar");
-		btnLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		painel3.add(btnLimpar);
+		botaoLimpar = new JButton("Limpar");
+		botaoLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		painel3.add(botaoLimpar);
 	}
-
+	
 	/*
-	 * 
-	 * Método para alterar dar fit na fonte public void
-	 * 
-	 * setTextFitTextField(JTextField txField, String text){ Font originalFont =
-	 * (Font)txField.getClientProperty("originalfont"); // Pegar fonte original
-	 * com as propriedades do Client if (originalFont == null) { // primeiro vez
-	 * que chamamos, ele adiciona originalFont = txField.getFont();
-	 * txField.putClientProperty("originalfont", originalFont); } int
-	 * stringWidth = txField.getFontMetrics(originalFont).stringWidth(text); int
-	 * componentWidth = txField.getWidth();
-	 * 
-	 * if (stringWidth > componentWidth) { // Reajuste se necessário // Para
-	 * descobrir quanto a fonte precisa encolher double widthRatio =
-	 * (double)componentWidth / (double)stringWidth;
-	 * 
-	 * int newFontSize = (int)Math.floor(originalFont.getSize() * widthRatio);
-	 * // Manter o tamanho mínimo
-	 * 
-	 * // 'Seta' a fonte do txField para o novo valor determinado.
-	 * txField.setFont(new Font(originalFont.getName(), originalFont.getStyle(),
-	 * newFontSize)); } else txField.setFont(originalFont); // Texto ajustado,
-	 * não precisa de ajustes
-	 * 
-	 * txField.setText(text); }
-	 * 
+	 * "Getters e setters" da visão
 	 */
 
 	public JButton getBtnSomar() {
-		return btnSomar;
-	}
-
-	public void setBtnSomar(JButton btnSomar) {
-		this.btnSomar = btnSomar;
+		return botaoSomar;
 	}
 
 	public JButton getBtnLimpar() {
-		return btnLimpar;
-	}
-
-	public void setBtnLimpar(JButton btnLimpar) {
-		this.btnLimpar = btnLimpar;
+		return botaoLimpar;
 	}
 
 	public JTextField getTextResultado() {
-		return textResultado;
+		return campoResultado;
 	}
 
 	public void setTextResultado(JTextField textResultado) {
-		this.textResultado = textResultado;
+		this.campoResultado = textResultado;
 	}
 
 	public JTextField getTextField() {
-		return textField;
+		return campoTexto1;
 	}
 
 	public void setTextField(JTextField textField) {
-		this.textField = textField;
+		this.campoTexto1 = textField;
 	}
 
 	public JTextField getTextField2() {
-		return textField2;
+		return campoTexto2;
 	}
 
 	public void setTextField2(JTextField textField2) {
-		this.textField2 = textField2;
+		this.campoTexto2 = textField2;
 	}
 
 }
